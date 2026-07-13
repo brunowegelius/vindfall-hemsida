@@ -15,6 +15,8 @@
   h1 { font-size:28px; line-height:1.1; margin:0 0 12px; letter-spacing:-0.02em; }
   p { font-size:16px; line-height:1.5; opacity:.92; margin:0 0 8px; }
   .hint { margin-top:22px; font-size:14px; opacity:.8; }
+  .btn { display:inline-block; margin-top:14px; background:#DFF37D; color:#292B2D; text-decoration:none;
+         font-weight:700; font-size:16px; padding:13px 26px; border-radius:999px; }
   details { margin-top:28px; text-align:left; background:rgba(0,0,0,.18); border-radius:12px; padding:14px 16px; }
   summary { cursor:pointer; font-size:13px; opacity:.85; }
   code { display:block; margin-top:10px; font-family:ui-monospace,Menlo,monospace; font-size:12px;
@@ -30,8 +32,9 @@
       <ellipse cx="50" cy="20" rx="13" ry="18" transform="rotate(270 50 50)"/><ellipse cx="50" cy="20" rx="13" ry="18" transform="rotate(315 50 50)"/>
       <circle cx="50" cy="50" r="22"/></g><circle cx="50" cy="50" r="11" fill="#EE5E37"/></svg>
     <h1>Klart — Tradera är kopplat</h1>
-    <p>Du kan stänga den här fliken och gå tillbaka till Vindfall.</p>
-    <p class="hint">Tryck på <strong>&bdquo;Jag har godkänt i Tradera&rdquo;</strong> i appen för att slutföra.</p>
+    <p>Vindfall öppnas automatiskt och slutför anslutningen.</p>
+    <p class="hint">Händer inget? Tryck här:</p>
+    <a class="btn" id="open" href="#">Öppna Vindfall</a>
     <details>
       <summary>Teknisk info (för test/felsökning)</summary>
       <code id="params">—</code>
@@ -42,6 +45,9 @@
     // return URL" är på) — hjälp under sandbox-testet. Ingen data lämnar sidan.
     var q = location.search.slice(1) || location.hash.slice(1);
     document.getElementById('params').textContent = q ? decodeURIComponent(q) : '(inga parametrar i URL:en)';
+    var deep = 'vindfall://tradera' + (q ? '?' + q : '');
+    document.getElementById('open').href = deep;
+    setTimeout(function () { window.location.href = deep; }, 500);
   </script>
 </body>
 </html>
