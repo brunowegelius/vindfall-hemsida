@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integritetspolicy — Vindfall</title>
+<meta name="description" content="Hur Vindfall behandlar dina personuppgifter: konto, foton, AI-behandling, molnlagring och dina rättigheter enligt GDPR.">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<!--
+  Personuppgiftsansvarig anges som Bruno Wegelius. Drivs Vindfall i ett bolag:
+  byt namnet nedan mot bolagsnamn + organisationsnummer (sök på "Bruno Wegelius"
+  i dokumentet).
+-->
+<style>
+  :root{
+    --orange:#EE5E37; --lime:#DFF37D; --ink:#292B2D;
+    --bg:#F5F1EA; --panel:#FFFFFF; --muted:#6B6459; --line:#E7E0D5;
+    --font:"Satoshi","Inter",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);
+       line-height:1.62;-webkit-font-smoothing:antialiased}
+  a{color:var(--orange);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header{background:var(--orange);color:#fff;padding:56px 24px 48px}
+  .wrap{max-width:720px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+  .brand svg{width:34px;height:34px}
+  .brand span{font-weight:900;font-size:22px;letter-spacing:-0.02em}
+  header h1{margin:0;font-size:clamp(30px,6vw,46px);font-weight:900;letter-spacing:-0.03em;line-height:1.05}
+  header p{margin:14px 0 0;font-size:15px;font-weight:500;opacity:.92;max-width:52ch}
+
+  main{max-width:720px;margin:0 auto;padding:8px 24px 80px}
+  .tldr{background:var(--panel);border-radius:18px;padding:22px 24px;margin:-28px 0 40px;
+        position:relative}
+  .tldr h2{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.08em;
+           text-transform:uppercase;color:var(--muted)}
+  .tldr ul{margin:0;padding-left:20px}
+  .tldr li{margin:6px 0;font-weight:500}
+
+  section{padding:8px 0}
+  h2{font-size:22px;font-weight:700;letter-spacing:-0.02em;margin:34px 0 8px}
+  h3{font-size:16px;font-weight:700;margin:22px 0 4px}
+  p,li{font-size:16px}
+  ul{padding-left:22px}
+  li{margin:5px 0}
+  .meta{color:var(--muted);font-size:14px;font-weight:500}
+  .divider{height:1px;background:var(--line);border:0;margin:40px 0}
+  .contact{background:var(--panel);border-radius:18px;padding:22px 24px;margin-top:36px}
+  .contact strong{font-weight:700}
+  footer{max-width:720px;margin:0 auto;padding:0 24px 60px;color:var(--muted);font-size:13px}
+  .back{display:inline-block;margin-top:8px;font-weight:600}
+  @media (max-width:560px){ header{padding:40px 20px 40px} main{padding:8px 20px 60px} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <!-- Vindfall-blomma -->
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <g fill="#DFF37D">
+          <circle cx="50" cy="22" r="15"/><circle cx="50" cy="78" r="15"/>
+          <circle cx="22" cy="50" r="15"/><circle cx="78" cy="50" r="15"/>
+          <circle cx="30" cy="30" r="13"/><circle cx="70" cy="30" r="13"/>
+          <circle cx="30" cy="70" r="13"/><circle cx="70" cy="70" r="13"/>
+        </g>
+        <circle cx="50" cy="50" r="15" fill="#EE5E37"/>
+      </svg>
+      <span>Vindfall</span>
+    </div>
+    <h1>Integritetspolicy</h1>
+    <p>Så behandlar Vindfall dina personuppgifter — vad vi samlar in, varför, vilka vi delar det med och vilka rättigheter du har.</p>
+  </div>
+</header>
+
+<main>
+  <div class="tldr">
+    <h2>Kort sammanfattning</h2>
+    <ul>
+      <li>Du loggar in <strong>utan lösenord</strong> — bara din e-post och en engångskod.</li>
+      <li>När du katalogiserar skickas plaggets <strong>foton och text till en AI-tjänst</strong> som skriver annonsen. AI-leverantören tränar inte sina modeller på dina bilder och raderar dem efter behandling.</li>
+      <li>Din katalog, dina foton och din försäljningsdata <strong>lagras och synkas i molnet</strong>, isolerat till ditt konto.</li>
+      <li>Du kan <strong>radera hela ditt konto och all data</strong> direkt i appen, när som helst.</li>
+      <li>Vi säljer aldrig dina uppgifter och använder dem inte för reklam.</li>
+    </ul>
+  </div>
+
+  <p class="meta">Senast uppdaterad: 14 juli 2026</p>
+
+  <section>
+    <h2>1. Vem ansvarar för dina uppgifter</h2>
+    <p>Personuppgiftsansvarig för behandlingen i Vindfall är <strong>Bruno Wegelius</strong>
+    ("vi", "oss"). Du når oss på <a href="mailto:hello@brunowegelius.com">hello@brunowegelius.com</a>
+    i alla frågor om denna policy eller dina personuppgifter.</p>
+  </section>
+
+  <section>
+    <h2>2. Vilka uppgifter vi behandlar</h2>
+
+    <h3>Kontouppgifter</h3>
+    <p>Din <strong>e-postadress</strong>, som används för att skapa ditt konto och logga in med
+    en engångskod. Vindfall använder inga lösenord.</p>
+
+    <h3>Foton på plagg</h3>
+    <p>De <strong>bilder du tar eller laddar upp</strong> på dina plagg. De används för att
+    identifiera och katalogisera plaggen och för att skapa annonstext och prisförslag.</p>
+
+    <h3>Fraktetiketter</h3>
+    <p>Om du använder fraktfunktionen kan du fota eller ladda upp <strong>skärmdumpar av
+    fraktetiketter</strong>. Dessa kan innehålla en köpares namn och utlämningsställe, och
+    behandlas enbart för att matcha etiketten mot rätt plagg och hjälpa dig hålla ordning på
+    försändelser.</p>
+
+    <h3>Katalog- och försäljningsdata</h3>
+    <p>Det du själv lägger in eller som skapas när du använder appen: plaggens titlar,
+    beskrivningar, kategorier, priser, försäljningar, utlämningsställen och liknande.</p>
+
+    <h3>Teknisk data</h3>
+    <p>Begränsad driftdata, t.ex. mått på AI-förbrukning (för att hålla koll på kostnader) och
+    grundläggande loggar som behövs för att tjänsten ska fungera och vara säker.</p>
+  </section>
+
+  <section>
+    <h2>3. Varför vi behandlar uppgifterna, och rättslig grund</h2>
+    <ul>
+      <li><strong>För att leverera tjänsten</strong> (konto, inloggning, katalog, synk mellan
+      dina enheter) — rättslig grund: <em>fullgörande av avtal</em>.</li>
+      <li><strong>För AI-behandlingen av dina foton</strong> (identifiering, annonstext,
+      prissättning) — rättslig grund: <em>ditt samtycke</em>, som du lämnar i appen innan
+      AI-funktionen används och kan återkalla.</li>
+      <li><strong>För säkerhet, felsökning och att förhindra missbruk</strong> — rättslig grund:
+      <em>berättigat intresse</em>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. AI-behandling av foton och text</h2>
+    <p>När du väljer att katalogisera ett plagg eller be om ett prisförslag skickas plaggets
+    foton och tillhörande text via vår server till vår AI-leverantör <strong>Anthropic</strong>,
+    som analyserar innehållet och skapar annonsen respektive priset. För prissättning kan
+    AI-tjänsten göra <strong>webbsökningar</strong> efter jämförbara priser.</p>
+    <p>Enligt Anthropics villkor <strong>tränas inte deras modeller på dina bilder</strong>, och
+    uppladdade bilder <strong>raderas efter att de behandlats</strong>. API-nyckeln till
+    AI-tjänsten finns endast på vår server — aldrig i appen på din enhet.</p>
+  </section>
+
+  <section>
+    <h2>5. Lagring, synk och vilka vi delar med</h2>
+    <p>För att din katalog, dina foton och din data ska finnas kvar och synkas mellan enheter
+    lagras de hos vår molnleverantör. Vi anlitar följande personuppgiftsbiträden och
+    underbiträden:</p>
+    <ul>
+      <li><strong>Supabase</strong> (databas, fillagring och inloggning), som i sin tur driftas
+      på <strong>Amazon Web Services</strong>. Varje konto är logiskt isolerat så att du bara
+      kommer åt din egen data.</li>
+      <li><strong>Anthropic</strong> (AI-behandling av foton och text, se punkt 4).</li>
+      <li><strong>Apple</strong> (distribution och installation av appen via App Store och
+      TestFlight).</li>
+    </ul>
+    <p>Vi säljer aldrig dina personuppgifter och delar dem inte med annonsnätverk.</p>
+  </section>
+
+  <section>
+    <h2>6. Överföring till länder utanför EU/EES</h2>
+    <p>Anthropic och delar av Supabase behandlar uppgifter i <strong>USA</strong>. Sådan
+    överföring sker med stöd av <strong>EU-kommissionens standardavtalsklausuler (SCC)</strong>
+    och lämpliga skyddsåtgärder. Kontakta oss om du vill veta mer.</p>
+  </section>
+
+  <section>
+    <h2>7. Hur länge vi sparar uppgifterna</h2>
+    <p>Vi sparar dina uppgifter så länge du har ett aktivt konto. Du kan när som helst
+    <strong>radera hela ditt konto och all tillhörande data</strong> i appen under
+    <em>Mer → Konto &amp; synk</em>; då raderas din organisations data och dina lagrade foton
+    i molnet. Appen kan även spara lokala säkerhetskopior (de 14 senaste) på din egen enhet;
+    dessa ligger kvar tills du tar bort appen eller de skrivs över.</p>
+  </section>
+
+  <section>
+    <h2>8. Dina rättigheter</h2>
+    <p>Enligt dataskyddsförordningen (GDPR) har du rätt att:</p>
+    <ul>
+      <li>få veta vilka uppgifter vi behandlar om dig (registerutdrag),</li>
+      <li>få felaktiga uppgifter rättade,</li>
+      <li>få dina uppgifter raderade,</li>
+      <li>begränsa eller invända mot behandlingen,</li>
+      <li>få ut dina uppgifter i ett maskinläsbart format (dataportabilitet),</li>
+      <li>när som helst återkalla ditt samtycke till AI-behandlingen.</li>
+    </ul>
+    <p>Kontakta oss på <a href="mailto:hello@brunowegelius.com">hello@brunowegelius.com</a> för
+    att utöva dina rättigheter. Är du missnöjd med hur vi hanterar dina personuppgifter har du
+    rätt att klaga till <strong>Integritetsskyddsmyndigheten (IMY)</strong>,
+    <a href="https://www.imy.se" rel="noopener">imy.se</a>.</p>
+  </section>
+
+  <section>
+    <h2>9. Säkerhet</h2>
+    <p>Uppgifter skyddas under överföring med kryptering (HTTPS), åtkomsten till din data är
+    begränsad till ditt eget konto, och känsliga nycklar bor på servern — aldrig i appen. Ingen
+    lösning är helt riskfri, men vi arbetar för att skydda dina uppgifter med rimliga tekniska
+    och organisatoriska åtgärder.</p>
+  </section>
+
+  <section>
+    <h2>10. Barn</h2>
+    <p>Vindfall är ett verktyg för att sälja begagnat och riktar sig inte till barn. Vi samlar
+    inte medvetet in personuppgifter från barn under 13 år.</p>
+  </section>
+
+  <section>
+    <h2>11. Ändringar i denna policy</h2>
+    <p>Vi kan uppdatera policyn när tjänsten utvecklas. Väsentliga ändringar informerar vi om,
+    och det uppdaterade datumet står alltid högst upp.</p>
+  </section>
+
+  <div class="contact">
+    <p style="margin:0"><strong>Frågor om dina personuppgifter?</strong><br>
+    Mejla <a href="mailto:hello@brunowegelius.com">hello@brunowegelius.com</a> så hjälper vi dig.</p>
+  </div>
+</main>
+
+<footer>
+  <hr class="divider" style="margin:0 0 20px">
+  © 2026 Vindfall · Bruno Wegelius
+  <br><a class="back" href="../">← Tillbaka till vindfall.se</a>
+</footer>
+</body>
+</html>
